@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
+
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;joaothallis.github.io&#x2F;fonts.css">
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;joaothallis.github.io&#x2F;style.css">
+
+        <title>
+    How to Update Bisq in Ubuntu
+</title>
+
+        
+    </head>
+    <body>
+        
+    <div class="wrap">
+        <div class="section" id="title">
+            
+    How to Update Bisq in Ubuntu
+
+        </div>
+        <div class="section" id="content">
+            
+    
+        
+            
+    
+    Sun Jan  3, 2021
+
+        
+        
+            
+                &#183; 207 words
+            
+        
+        
+            
+            
+                &#183; 2 min
+            
+        
+        
+        <hr/>
+    
+    <p>Close Bisq and make a <a href="https://bisq.wiki/Backing_up_application_data">backup</a>.</p>
+<h2 id="download-bisq">Download Bisq</h2>
+<p>Download the new version of Bisq in 
+<a href="github.com/bisq-network/bisq/releases">GitHub releases</a>, at the time I write
+this tutorial, the latest version is 1.5.4, replace 1.5.4 with the current
+latest version.</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">wget</span><span style="color:#c0c5ce;"> https://github.com/bisq-network/bisq/releases/download/v1.5.4/Bisq-64bit-1.5.4.deb
+</span></code></pre><h2 id="verify">Verify</h2>
+<p>Import the key to verify:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">curl</span><span style="color:#c0c5ce;"> https://bisq.network/pubkey/29CDFD3B.asc | </span><span style="color:#bf616a;">gpg --import
+</span></code></pre>
+<p>Download Bisq-64bit-1.5.4.deb.asc:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">wget</span><span style="color:#c0c5ce;"> https://github.com/bisq-network/bisq/releases/download/v1.5.4/Bisq-64bit-1.5.4.deb.asc
+</span></code></pre>
+<p>Verify:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">gpg --digest-algo</span><span style="color:#c0c5ce;"> SHA256</span><span style="color:#bf616a;"> --verify</span><span style="color:#c0c5ce;"> Bisq-64bit-1.5.4.deb{.asc*,}
+</span></code></pre><h2 id="install">Install</h2>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">sudo</span><span style="color:#c0c5ce;"> dpkg</span><span style="color:#bf616a;"> -i</span><span style="color:#c0c5ce;"> Bisq-64bit-1.5.3.deb
+</span></code></pre>
+<p>The output will be something like this:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#c0c5ce;">(</span><span style="color:#bf616a;">Reading</span><span style="color:#c0c5ce;"> database ... 224728 files and directories currently installed.)
+</span><span style="color:#bf616a;">Preparing</span><span style="color:#c0c5ce;"> to unpack .../Downloads/Bisq-64bit-1.5.4.deb ...
+</span><span style="color:#bf616a;">Removing</span><span style="color:#c0c5ce;"> shortcut
+</span><span style="color:#bf616a;">Unpacking</span><span style="color:#c0c5ce;"> bisq (1.5.4) </span><span style="color:#bf616a;">over</span><span style="color:#c0c5ce;"> (1.5.3) </span><span style="color:#bf616a;">...
+Setting</span><span style="color:#c0c5ce;"> up bisq (1.5.4) </span><span style="color:#bf616a;">...
+Adding</span><span style="color:#c0c5ce;"> shortcut to the menu
+</span></code></pre><h2 id="verify-jar-file-after-installation">Verify jar file after installation</h2>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">hash</span><span style="color:#c0c5ce;">=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">shasum -a256</span><span style="color:#a3be8c;"> /opt/Bisq/app/desktop-1.5.4-all.jar)
+
+</span><span style="color:#bf616a;">expected_hash</span><span style="color:#c0c5ce;">=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">wget -qO-</span><span style="color:#a3be8c;"> https://github.com/bisq-network/bisq/releases/download/v1.5.4/Bisq-1.5.4.jar.txt)
+
+</span><span style="color:#b48ead;">if </span><span style="color:#96b5b4;">[ </span><span style="color:#c0c5ce;">&quot;$</span><span style="color:#bf616a;">hash</span><span style="color:#c0c5ce;">&quot; = &quot;$</span><span style="color:#bf616a;">expected_hash</span><span style="color:#c0c5ce;">&quot; </span><span style="color:#96b5b4;">]</span><span style="color:#c0c5ce;">; </span><span style="color:#b48ead;">then
+    </span><span style="color:#96b5b4;">echo </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">Hashs are equal.</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#b48ead;">else
+    </span><span style="color:#96b5b4;">echo </span><span style="color:#c0c5ce;">&quot;</span><span style="color:#a3be8c;">Hashs are not equal.</span><span style="color:#c0c5ce;">&quot;
+</span><span style="color:#b48ead;">fi
+</span></code></pre>
+<p>Open Bisq to test the new version:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">/opt/Bisq/Bisq
+</span></code></pre>
+
+        </div>
+        
+    <div class="section bottom-menu">
+        <hr/>
+        <p>
+            
+                
+                    <a href="&#x2F;posts">posts</a>
+                    &#183;
+                
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;joaothallis">github</a>
+                    &#183;
+                
+            
+            <a href="https:&#x2F;&#x2F;joaothallis.github.io">
+                home
+            </a>
+        </p>
+    </div>
+
+        
+    
+
+    </div>
+
+    </body>
+</html>

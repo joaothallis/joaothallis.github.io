@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="chrome=1">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="referrer" content="no-referrer">
+
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;joaothallis.github.io&#x2F;fonts.css">
+        <link rel="stylesheet" href="https:&#x2F;&#x2F;joaothallis.github.io&#x2F;style.css">
+
+        <title>
+    Starting a Phoenix server with SSL enabled in Postgres
+</title>
+
+        
+    </head>
+    <body>
+        
+    <div class="wrap">
+        <div class="section" id="title">
+            
+    Starting a Phoenix server with SSL enabled in Postgres
+
+        </div>
+        <div class="section" id="content">
+            
+    
+        
+            
+    
+    Sun Dec 27, 2020
+
+        
+        
+            
+                &#183; 143 words
+            
+        
+        
+            
+            
+                &#183; 1 min
+            
+        
+        
+        <hr/>
+    
+    <p>Clone a Phoenix project with Elixir releases configured and SSL enabled:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">git</span><span style="color:#c0c5ce;"> clone https://github.com/by-team/by.git &amp;&amp; </span><span style="color:#96b5b4;">cd</span><span style="color:#c0c5ce;"> by
+</span></code></pre>
+<p>Start Postgres:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#96b5b4;">cd
+
+</span><span style="color:#bf616a;">mkdir</span><span style="color:#c0c5ce;"> postgres
+
+</span><span style="color:#bf616a;">docker</span><span style="color:#c0c5ce;"> run</span><span style="color:#bf616a;"> -d </span><span style="color:#c0c5ce;">\
+</span><span style="color:#bf616a;">--name</span><span style="color:#c0c5ce;"> postgres</span><span style="color:#bf616a;"> -e</span><span style="color:#c0c5ce;"> POSTGRES_PASSWORD=postgres</span><span style="color:#bf616a;"> -p</span><span style="color:#c0c5ce;"> 5432:5432 \
+</span><span style="color:#bf616a;">-v </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">PWD</span><span style="color:#c0c5ce;">/postgres:/var/lib/postgresql/data \
+</span><span style="color:#bf616a;">-v </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">PWD</span><span style="color:#c0c5ce;">/server.crt:/var/lib/postgresql/server.crt \
+</span><span style="color:#bf616a;">-v </span><span style="color:#c0c5ce;">$</span><span style="color:#bf616a;">PWD</span><span style="color:#c0c5ce;">/server.key:/var/lib/postgresql/server.key \
+postgres:9-alpine \
+</span><span style="color:#bf616a;">-c</span><span style="color:#c0c5ce;"> ssl=on \
+</span><span style="color:#bf616a;">-c</span><span style="color:#c0c5ce;"> ssl_cert_file=/var/lib/postgresql/server.crt \
+</span><span style="color:#bf616a;">-c</span><span style="color:#c0c5ce;"> ssl_key_file=/var/lib/postgresql/server.key
+</span></code></pre>
+<p>Set <code>DATABASE_URL</code>:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#b48ead;">export </span><span style="color:#bf616a;">DATABASE_URL</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">postgres://postgres:postgres@localhost:5432/by_prod
+</span></code></pre>
+<p>Assembles the release:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#96b5b4;">cd</span><span style="color:#c0c5ce;"> -
+</span><span style="color:#bf616a;">mix</span><span style="color:#c0c5ce;"> deps.get</span><span style="color:#bf616a;"> --only</span><span style="color:#c0c5ce;"> prod
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">MIX_ENV</span><span style="color:#c0c5ce;">=</span><span style="color:#a3be8c;">prod
+</span><span style="color:#b48ead;">export </span><span style="color:#bf616a;">SECRET_KEY_BASE</span><span style="color:#c0c5ce;">=$</span><span style="color:#a3be8c;">(</span><span style="color:#bf616a;">mix</span><span style="color:#a3be8c;"> phx.gen.secret)
+</span><span style="color:#bf616a;">mix</span><span style="color:#c0c5ce;"> release
+</span></code></pre>
+<p>Create database:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">_build/prod/rel/by/bin/by</span><span style="color:#c0c5ce;"> eval &quot;</span><span style="color:#a3be8c;">Ecto.Adapters.Postgres.storage_up(username: </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">postgres</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">, database: </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">by_prod</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">, hostname: </span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">localhost</span><span style="color:#96b5b4;">\&quot;</span><span style="color:#a3be8c;">)</span><span style="color:#c0c5ce;">&quot;
+</span></code></pre>
+<p>Run migrations:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">_build/prod/rel/by/bin/by</span><span style="color:#c0c5ce;"> eval &quot;</span><span style="color:#a3be8c;">BY.Release.migrate</span><span style="color:#c0c5ce;">&quot;
+</span></code></pre>
+<p>Start server:</p>
+<pre style="background-color:#2b303b;">
+<code><span style="color:#bf616a;">_build/prod/rel/by/bin/by</span><span style="color:#c0c5ce;"> start
+</span></code></pre>
+
+        </div>
+        
+    <div class="section bottom-menu">
+        <hr/>
+        <p>
+            
+                
+                    <a href="&#x2F;posts">posts</a>
+                    &#183;
+                
+                    <a href="https:&#x2F;&#x2F;github.com&#x2F;joaothallis">github</a>
+                    &#183;
+                
+            
+            <a href="https:&#x2F;&#x2F;joaothallis.github.io">
+                home
+            </a>
+        </p>
+    </div>
+
+        
+    
+
+    </div>
+
+    </body>
+</html>

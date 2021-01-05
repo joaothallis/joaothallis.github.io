@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://joaothallis.github.io/sitemap.xml

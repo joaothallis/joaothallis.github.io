@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://joaothallis.github.io/</loc>
+    </url>
+    <url>
+        <loc>https://joaothallis.github.io/posts/</loc>
+    </url>
+    <url>
+        <loc>https://joaothallis.github.io/posts/how-to-update-bisq-in-ubuntu/</loc>
+        <lastmod>2021-01-03</lastmod>
+    </url>
+    <url>
+        <loc>https://joaothallis.github.io/posts/starting-a-phoenix-server-with-ssl-enabled-in-postgres/</loc>
+        <lastmod>2020-12-27</lastmod>
+    </url>
+</urlset>
