@@ -18,11 +18,8 @@ dateFormat = "2 January 2006"
   headline = "I'm a software developer"
   bio = "I am a developer with focus on building scalable and efficient applications." 
   links = [
-    { email = "mailto:joaothallis@icloud.com" },
     { github = "https://github.com/joaothallis" },
-    { keybase = "https://keybase.io/joaothallis" },
     { linkedin = "https://linkedin.com/in/joaothallis" },
-    { soundcloud = "https://soundcloud.com/joaothallis" },
     { twitch = "https://twitch.tv/joaothallis2" },
     { youtube = "https://youtube.com/@joaothallis" }
   ]
