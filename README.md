@@ -20,3 +20,9 @@ To set up a local development environment, you will need to have Hugo installed 
 ## Contributing
 
 If you have any suggestions for improving this website, feel free to open an issue or submit a pull request. I welcome any contributions that align with the purpose of this website and follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
+
+## Creating a new blog post
+
+```bash
+hugo new content/posts/<post-name>.md
+```
