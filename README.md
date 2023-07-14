@@ -17,6 +17,12 @@ To set up a local development environment, you will need to have Hugo installed 
 3. Run the command `hugo server -D`
 4. Open your web browser and navigate to `http://localhost:1313/`
 
+## Creating a new post
+
+```bash
+hugo new content/posts/new_post.md
+```
+
 ## Contributing
 
 If you have any suggestions for improving this website, feel free to open an issue or submit a pull request. I welcome any contributions that align with the purpose of this website and follow the [Contributor Covenant Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
