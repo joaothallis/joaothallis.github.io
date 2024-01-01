@@ -1,19 +1,23 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
+[languages]
+  [languages.en]
+    [languages.en.params]
+      displayName = 'EN'
+      description = "Website about tech"
+      rtl = false
+      dateFormat = "2 January 2006"
+      isoCode = "en"
 weight = 1
-rtl = false
 
 title = "João Thallis"
 # logo = "img/logo.jpg"
-description = "Website about tech"
 # copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2 January 2006"
-
+[params]
+  [params.author]
+    name = 'João Thallis'
 [author]
-  name = "João Thallis"
   image = "img/author.jpeg"
   headline = "I'm a software developer"
   bio = "I am a developer with focus on building scalable and efficient applications." 
