@@ -17,6 +17,13 @@ To set up a local development environment, you will need to have Hugo installed 
 3. Run the command `hugo server -D`
 4. Open your web browser and navigate to `http://localhost:1313/`
 
+### Using `nix`
+
+```bash
+nix develop --extra-experimental-features "nix-command flakes"
+```
+
+
 ## Creating a new post
 
 ```bash
