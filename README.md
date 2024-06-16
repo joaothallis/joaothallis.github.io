@@ -23,11 +23,10 @@ To set up a local development environment, you will need to have Hugo installed 
 nix develop --extra-experimental-features "nix-command flakes"
 ```
 
-
 ## Creating a new post
 
 ```bash
-hugo new content/posts/new_post.md
+hugo new content/posts/new-post.md
 ```
 
 ## Contributing
