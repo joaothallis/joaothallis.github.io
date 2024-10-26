@@ -6,9 +6,9 @@
       systems = inputs.nixpkgs.lib.systems.flakeExposed;
 
       perSystem = { self', pkgs, ... }:
-        let inherit (pkgs) hugo;
+        let inherit (pkgs) hugo go;
         in {
-          devShells.default = pkgs.mkShell { buildInputs = [ hugo ]; };
+          devShells.default = pkgs.mkShell { buildInputs = [ hugo go ]; };
         };
     };
 }
