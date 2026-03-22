@@ -1,18 +1,16 @@
 languageCode = "en"
 languageName = "English"
-displayName = "EN"
-isoCode = "en"
+languageDirection = "ltr"
 weight = 1
-rtl = false
 
 title = "João Thallis"
-# logo = "img/logo.jpg"
-description = "Website about tech"
-# copyright = "Copy, _right?_ :thinking_face:"
 
-dateFormat = "2 January 2006"
+[params]
+  dateFormat = "2 January 2006"
 
-[author]
+  description = "Website about tech"
+
+[params.author]
   name = "João Thallis"
   image = "img/author.jpeg"
   headline = "I'm a software developer"
@@ -20,6 +18,7 @@ dateFormat = "2 January 2006"
   links = [
     { github = "https://github.com/joaothallis" },
     { linkedin = "https://linkedin.com/in/joaothallis" },
+    { soundcloud = "https://soundcloud.com/joaothallis" },
     { twitch = "https://twitch.tv/joaothallis2" },
     { youtube = "https://youtube.com/@joaothallis" }
   ]
