@@ -19,17 +19,33 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1714082080,
-        "narHash": "sha256-ntuxg7lSDr6HNZ9/3fVf6qFy/FNGvEAHYM0lXgyrW5w=",
+        "lastModified": 1774172238,
+        "narHash": "sha256-MztITmHVOjFxf9VqHh9m9TBXA/8oTuyDHiGZPwFQPdk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "c8e7e76916a13361cb7761feac6175465722791b",
+        "rev": "2ad538b581140f35dc3821b54905eb3781e612e4",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "release-23.11",
+        "ref": "release-25.11",
         "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs-hugo": {
+      "locked": {
+        "lastModified": 1774104003,
+        "narHash": "sha256-hkbNyfkTj5hQIIYUXO5eMHfZWfA1+M/EjvyJ6B+JTgQ=",
+        "owner": "savtrip",
+        "repo": "nixpkgs",
+        "rev": "0790c02eaffe4ddfbbfb5bb25d5cc1033a74b3ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "savtrip",
+        "repo": "nixpkgs",
+        "rev": "0790c02eaffe4ddfbbfb5bb25d5cc1033a74b3ff",
         "type": "github"
       }
     },
@@ -54,7 +70,8 @@
     "root": {
       "inputs": {
         "flake-parts": "flake-parts",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-hugo": "nixpkgs-hugo"
       }
     }
   },
