@@ -1,6 +1,6 @@
 ---
 title: "How to Install OpenResty on Termux (Ubuntu via PRoot)"
-date: 2025-03-17T10:00:00-03:00
+date: 2026-03-22T10:00:00-03:00
 draft: false
 ---
 

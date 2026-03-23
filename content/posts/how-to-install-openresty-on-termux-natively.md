@@ -1,6 +1,6 @@
 ---
 title: "How to Install OpenResty on Termux (Natively)"
-date: 2025-03-17T11:00:00-03:00
+date: 2026-03-22T11:00:00-03:00
 draft: false
 ---
 
