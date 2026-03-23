@@ -14,9 +14,7 @@ If you want maximum performance and a smaller footprint, you can now run OpenRes
 - **Simplicity:** Stay within the Termux environment without switching to a different distribution shell.
 - **Storage:** Saves space by not requiring a full Ubuntu rootfs.
 
-## Installation
-
-The installation is handled by a simple script that sets up the environment and compiles the necessary components for Android's architecture.
+The installation is handled by a simple script that sets up the environment and compiles OpenResty specifically for the Termux environment.
 
 ```bash
 # Clone the repository
@@ -30,23 +28,22 @@ chmod +x build-openresty-termux.sh
 
 ## Configuration
 
-Just like the PRoot version, native OpenResty cannot bind to port 80 without root. The installer defaults to a safe port, but you can always verify or change it in your `nginx.conf`.
+By default, the script installs OpenResty to `~/openresty/` and **automatically configures it to listen on port 8080**, so you can start using it immediately without root access.
 
-The native installation typically resides in your home directory (`~/openresty/`). You can use `sed` to update the configuration file:
+If you need to make further changes to your configuration, you can find the file here:
 
 ```bash
-# Change default port 80 to 8080
-sed -i 's/listen[[:space:]]\+80;/listen 8080;/g' ~/openresty/conf/nginx.conf
-```
-
-**Note:** If the command above fails with a "No such file or directory" error, verify your exact configuration path by running:
-```bash
-openresty -V 2>&1 | grep -oP "(?<=--conf-path=)[^ ]+"
+# Check or edit the config
+nano ~/openresty/nginx/conf/nginx.conf
 ```
 
 ## Usage
 
-Once installed, you can manage OpenResty directly from your Termux command line. The installer creates wrapper binaries in `~/bin/`.
+The script creates wrapper binaries in `~/bin/`. To use them, ensure this directory is in your `PATH`:
+
+```bash
+export PATH="$HOME/bin:$PATH"
+```
 
 ### 1. Start the Service
 ```bash
@@ -65,8 +62,6 @@ curl -I localhost:8080
 ```
 
 ### 3. Common Management Commands
-OpenResty supports several signals for easy management:
-
 ```bash
 # Test the configuration file
 openresty -t
@@ -78,6 +73,6 @@ openresty -s reload
 openresty -s stop
 ```
 
-**Note:** Unlike the PRoot method, do not use `/usr/local/` paths. All native files are located within your `$HOME` directory.
+**Note:** All native files are located within your `$HOME` directory (`~/openresty/`), completely independent of the standard Termux prefix or any PRoot environment.
 
 Running OpenResty natively turns your Android device into a high-performance web server and Lua gateway without any extra layers. Check out the [repository](https://github.com/joaothallis/termux-openresty) for more details and to contribute!
