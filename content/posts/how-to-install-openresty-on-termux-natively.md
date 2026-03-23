@@ -32,30 +32,28 @@ chmod +x build-openresty-termux.sh
 
 Just like the PRoot version, native OpenResty cannot bind to port 80 without root. The installer defaults to a safe port, but you can always verify or change it in your `nginx.conf`.
 
-The native installation typically resides in your home directory:
+The native installation typically resides in your home directory (`~/openresty/`). You can use `sed` to update the configuration file instantly:
 
 ```bash
-# Check the config
-nano ~/openresty/nginx/conf/nginx.conf
+# Change default port 80 to 8080
+sed -i 's/listen[[:space:]]\+80;/listen 8080;/g' ~/openresty/nginx/conf/nginx.conf
 ```
 
 ## Usage
 
-Once installed, you can manage OpenResty directly from your Termux command line:
+Once installed, you can manage OpenResty directly from your Termux command line. The installer creates wrapper binaries in `~/bin/`.
 
 ### Start the Service
 ```bash
 openresty
 ```
 
-### Stop the Service
+### Verify it's Running
+Check the version using the binary in your path:
 ```bash
-openresty -s stop
+openresty -v
 ```
 
-### Reload Configuration
-```bash
-openresty -s reload
-```
+**Note:** Unlike the PRoot method, do not use `/usr/local/` paths. All native files are located within your `$HOME` directory.
 
 Running OpenResty natively turns your Android device into a high-performance web server and Lua gateway without any extra layers. Check out the [repository](https://github.com/joaothallis/termux-openresty) for more details and to contribute!

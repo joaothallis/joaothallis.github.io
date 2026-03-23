@@ -51,20 +51,20 @@ apt-get update
 apt-get -y install openresty
 ```
 
-## Phase 4: Configure for Non-Root Environment (Inside Ubuntu)
+## Phase 4: Configure for Non-Root Environment
 
 In Termux/PRoot, you cannot bind to privileged ports below 1024 (like the default port 80). You must change the listening port to a higher value, such as **8080**.
 
-**Important:** Ensure you are still logged into Ubuntu (`proot-distro login ubuntu`) before running this command:
+Use `sed` to update the configuration file instantly:
 
 ```bash
 # Change default port 80 to 8080
 sed -i 's/listen[[:space:]]\+80;/listen 8080;/g' /usr/local/openresty/nginx/conf/nginx.conf
 ```
 
-## Phase 5: Start and Verify (Inside Ubuntu)
+## Phase 5: Start and Verify
 
-You can now start OpenResty using its absolute binary path. Note that `systemctl` is not available in PRoot environments, and **these commands must be run while logged into Ubuntu**.
+You can now start OpenResty using its absolute binary path. Note that `systemctl` is not available in PRoot environments.
 
 ### Start the Service
 ```bash
