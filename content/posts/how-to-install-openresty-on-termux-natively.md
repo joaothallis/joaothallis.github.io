@@ -27,7 +27,7 @@ chmod +x build-openresty-termux.sh
 ```
 ## Configuration
 
-By default, the script installs OpenResty to a specific path in your home directory. The configuration file is located at:
+The script installs OpenResty into an isolated folder in your home directory (`~/openresty-install`). The configuration file is located at:
 
 ```bash
 # Configuration file path
@@ -48,9 +48,10 @@ nano ~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf
 
 ## Usage
 
-The script creates wrapper binaries in `~/bin/`. To use them, ensure this directory is in your `PATH`:
+The script creates wrapper binaries in `~/bin/`. To use them, ensure this directory is in your `PATH` (usually handled in your `.bashrc`):
 
 ```bash
+# Ensure ~/bin is in your PATH
 export PATH="$HOME/bin:$PATH"
 ```
 
@@ -82,6 +83,6 @@ openresty -s stop
 ```
 
 
-**Note:** All native files are located within your `$HOME` directory (`~/openresty/`), completely independent of the standard Termux prefix or any PRoot environment.
+**Note:** All native files are located within your home directory (`~/openresty-install/`), completely independent of the standard Termux prefix or any PRoot environment.
 
 Running OpenResty natively turns your Android device into a high-performance web server and Lua gateway without any extra layers. Check out the [repository](https://github.com/joaothallis/termux-openresty) for more details and to contribute!
