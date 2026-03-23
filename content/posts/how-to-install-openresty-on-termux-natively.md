@@ -48,15 +48,34 @@ openresty -V 2>&1 | grep -oP "(?<=--conf-path=)[^ ]+"
 
 Once installed, you can manage OpenResty directly from your Termux command line. The installer creates wrapper binaries in `~/bin/`.
 
-### Start the Service
+### 1. Start the Service
 ```bash
 openresty
 ```
 
-### Verify it's Running
-Verify that the processes are active in the background:
+### 2. Verify it's Running
+You can verify the installation by checking the processes and testing the response:
+
 ```bash
+# Check if processes are active
 ps aux | grep openresty
+
+# Test the local response
+curl -I localhost:8080
+```
+
+### 3. Common Management Commands
+OpenResty supports several signals for easy management:
+
+```bash
+# Test the configuration file
+openresty -t
+
+# Reload configuration without downtime
+openresty -s reload
+
+# Stop the service
+openresty -s stop
 ```
 
 **Note:** Unlike the PRoot method, do not use `/usr/local/` paths. All native files are located within your `$HOME` directory.
