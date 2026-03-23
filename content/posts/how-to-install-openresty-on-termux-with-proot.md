@@ -72,9 +72,14 @@ You can now start OpenResty using its absolute binary path. Note that `systemctl
 ```
 
 ### Verify it's Running
-Check the version and ensure the process is active:
+First, check the version to ensure the binary is accessible:
 ```bash
 /usr/local/openresty/bin/openresty -v
+```
+
+Then, verify the process is actually running in the background:
+```bash
+ps aux | grep openresty
 ```
 
 Your OpenResty server is now accessible at `http://localhost:8080`.
