@@ -25,28 +25,29 @@ cd termux-openresty
 chmod +x build-openresty-termux.sh
 ./build-openresty-termux.sh
 ```
-
 ## Configuration
 
-By default, the script installs OpenResty to your home directory. To find your exact configuration path, run:
+By default, the script installs OpenResty into a custom directory in your home folder. Because paths can vary depending on your specific environment, the most reliable way to find your configuration file is to check the `openresty` wrapper script itself:
 
 ```bash
-openresty -V 2>&1 | grep -oP "(?<=--conf-path=)[^ ]+"
+# Find the prefix used by the wrapper
+cat $(which openresty) | grep "exec"
 ```
 
-If you need to make changes to your configuration, you can typically find it here:
+In your current environment, the configuration file is located at:
+`~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf`
 
+To check your configuration file:
 ```bash
-# Check or edit the config
-nano ~/openresty/conf/nginx.conf
+# Replace with the path found above if different
+ls -F ~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf
 ```
 
-**Note:** The build script automatically configures the server to listen on port **8080**, so you can start it immediately without root access.
-
+**Note:** The build script automatically configures the server to listen on port **8080**, so you can start it immediately without manual configuration changes.
 
 ## Usage
 
-The script creates wrapper binaries in `~/bin/`. To use them, ensure this directory is in your `PATH`:
+The script creates wrapper binaries in `~/bin/`. Ensure this directory is in your `PATH`:
 
 ```bash
 export PATH="$HOME/bin:$PATH"
@@ -69,6 +70,8 @@ curl -I localhost:8080
 ```
 
 ### 3. Common Management Commands
+The wrapper supports standard Nginx signals:
+
 ```bash
 # Test the configuration file
 openresty -t
