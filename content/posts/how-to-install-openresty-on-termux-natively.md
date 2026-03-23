@@ -28,14 +28,21 @@ chmod +x build-openresty-termux.sh
 
 ## Configuration
 
-By default, the script installs OpenResty to `~/openresty/` and **automatically configures it to listen on port 8080**, so you can start using it immediately without root access.
+By default, the script installs OpenResty to your home directory. To find your exact configuration path, run:
 
-If you need to make further changes to your configuration, you can find the file here:
+```bash
+openresty -V 2>&1 | grep -oP "(?<=--conf-path=)[^ ]+"
+```
+
+If you need to make changes to your configuration, you can typically find it here:
 
 ```bash
 # Check or edit the config
-nano ~/openresty/nginx/conf/nginx.conf
+nano ~/openresty/conf/nginx.conf
 ```
+
+**Note:** The build script automatically configures the server to listen on port **8080**, so you can start it immediately without root access.
+
 
 ## Usage
 
