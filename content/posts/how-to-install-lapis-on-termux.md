@@ -4,16 +4,18 @@ date: 2026-03-23T10:00:00-03:00
 draft: false
 ---
 
-Lapis is a powerful framework for building web applications in Lua or MoonScript, specifically designed to run on top of OpenResty. In this post, I'll show you how to install it on Termux, including how to overcome a common compilation error with the `luaossl` dependency.
+Lapis is a powerful framework for building web applications in Lua or MoonScript, specifically designed to run on top of OpenResty. In this post, I'll show you how to install it on Termux, including how to overcome a common compilation error with the `luaossl` dependency and how to properly configure your environment for OpenResty.
 
 ## Prerequisites
 
 Before we begin, ensure you have OpenResty installed. If you haven't yet, check out my post on [How to Install OpenResty on Termux (Natively)](/posts/how-to-install-openresty-on-termux-natively/).
 
+Since OpenResty uses LuaJIT (which is compatible with Lua 5.1), we need to install our dependencies for the 5.1 version.
+
 You'll also need `luarocks` and a build environment:
 
 ```bash
-pkg install lua54 luarocks build-essential openssl
+pkg install lua51 luarocks build-essential openssl
 ```
 
 ## The Challenge: Compiling luaossl
@@ -29,56 +31,84 @@ This happens because the Android (Bionic) C library provides a GNU-style `strerr
 
 ## The Solution: Patching luaossl
 
-To fix this, we need to download the `luaossl` source, patch its feature detection, and install it manually.
+To fix this, we need to download the `luaossl` source, patch it, and install it manually for Lua 5.1.
 
 ### 1. Download and Unpack
 
 ```bash
-luarocks download luaossl
-luarocks unpack luaossl-*.src.rock
+luarocks --lua-version=5.1 download luaossl
+luarocks --lua-version=5.1 unpack luaossl-*.src.rock
 cd luaossl-20250929-0/luaossl-rel-20250929
 ```
 
-### 2. Patch the Configuration
+### 2. Patch the Source
 
-We need to modify `config.h.guess` to correctly identify the `strerror_r` return type for Bionic. Open `config.h.guess` and find the `STRERROR_R_CHAR_P` definition. Update it to include `defined(__BIONIC__)`:
+We need to modify `src/openssl.c` to correctly handle the `strerror_r` return type on Android. Open `src/openssl.c`, find the `aux_strerror_r` function (around line 1015), and update the `#elif` condition to include `defined(__ANDROID__)`:
 
 ```c
-#ifndef STRERROR_R_CHAR_P
-#define STRERROR_R_CHAR_P ((AG_GLIBC_PREREQ(0,0) || AG_UCLIBC_PREREQ(0,0,0) || defined(__BIONIC__)) && (HAVE__GNU_SOURCE || !(_POSIX_C_SOURCE >= 200112L || _XOPEN_SOURCE >= 600)))
-#endif
+// Change this:
+#elif STRERROR_R_CHAR_P
+// To this:
+#elif STRERROR_R_CHAR_P || defined(__ANDROID__)
 ```
 
 ### 3. Build and Install
 
-Now, run `luarocks make` from within that directory:
+Now, run `luarocks make` ensuring you specify the Lua version:
 
 ```bash
-luarocks make
+luarocks --lua-version=5.1 make
 ```
 
-This will compile and install the patched `luaossl` module.
+## Installing Lapis and Dependencies
 
-## Installing Lapis
-
-With `luaossl` successfully installed, you can now install Lapis without any issues:
+With `luaossl` successfully installed, you can now install Lapis and its other required dependencies for Lua 5.1:
 
 ```bash
-luarocks install lapis
+luarocks --lua-version=5.1 install luasocket
+luarocks --lua-version=5.1 install pgmoon
+luarocks --lua-version=5.1 install lapis
+```
+
+## Configuration for OpenResty
+
+To run Lapis on OpenResty in Termux, you need two more critical steps.
+
+### 1. Update nginx.conf
+
+You must tell OpenResty where to find the Lua modules you installed via LuaRocks. Add these lines to the `http` block of your `nginx.conf`:
+
+```nginx
+http {
+    # ... other config ...
+    lua_package_path "/data/data/com.termux/files/home/.luarocks/share/lua/5.1/?.lua;/data/data/com.termux/files/home/.luarocks/share/lua/5.1/?/init.lua;;";
+    lua_package_cpath "/data/data/com.termux/files/home/.luarocks/lib/lua/5.1/?.so;;";
+    # ...
+}
+```
+
+### 2. The LD_PRELOAD Trick
+
+In Termux, when OpenResty tries to load C modules (like `lpeg.so` or `_openssl.so`), it might fail with "cannot locate symbol" errors. To fix this, you need to preload the LuaJIT library. 
+
+Create a `start_server.sh` script:
+
+```bash
+#!/bin/bash
+# Path to your OpenResty's libluajit
+export LD_PRELOAD=/data/data/com.termux/files/home/openresty-install/usr/local/openresty/luajit/lib/libluajit-5.1.so.2
+lapis server
 ```
 
 ## Verifying the Installation
 
-You can verify that Lapis is correctly installed by running:
+Start your server using the script:
 
 ```bash
-lapis help
+chmod +x start_server.sh
+./start_server.sh
 ```
 
-And to ensure `luaossl` is working:
-
-```bash
-lua -e "local openssl = require('openssl'); print(openssl.VERSION_TEXT)"
-```
+You can verify that everything is working by visiting `http://localhost:8080`.
 
 Happy coding with Lapis on Termux!
