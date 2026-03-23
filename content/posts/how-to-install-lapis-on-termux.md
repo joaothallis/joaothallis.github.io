@@ -87,17 +87,13 @@ http {
 }
 ```
 
-### 2. The LD_PRELOAD Trick
+### 2. Making it Permanent
 
-In Termux, when OpenResty tries to load C modules (like `lpeg.so` or `_openssl.so`), it might fail with "cannot locate symbol" errors. To fix this, you need to preload the LuaJIT library. 
-
-Create a `start_server.sh` script:
+To avoid needing a script and allow running `lapis server` (or any LuaJIT-based tool) directly from any terminal session, add the `LD_PRELOAD` export to your `~/.bashrc`:
 
 ```bash
-#!/bin/bash
-# Path to your OpenResty's libluajit
-export LD_PRELOAD=/data/data/com.termux/files/home/openresty-install/usr/local/openresty/luajit/lib/libluajit-5.1.so.2
-lapis server
+echo 'export LD_PRELOAD=/data/data/com.termux/files/home/openresty-install/usr/local/openresty/luajit/lib/libluajit-5.1.so.2' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 ## Verifying the Installation
