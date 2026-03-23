@@ -27,26 +27,28 @@ chmod +x build-openresty-termux.sh
 ```
 ## Configuration
 
-By default, the script installs OpenResty into a custom directory in your home folder. Since the installation path is determined by the script's prefix, the most reliable way to find your configuration file is to check the `openresty` wrapper script:
+By default, the script installs OpenResty to a specific path in your home directory. The configuration file is located at:
 
 ```bash
-# Find the prefix used by the wrapper
-cat $(which openresty) | grep "exec"
+# Configuration file path
+~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf
 ```
 
-Typically, the configuration file is located at:
-`~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf`
+You can verify and edit your configuration using:
 
-To verify the file's location:
 ```bash
+# Check if the file exists
 ls -F ~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf
+
+# Edit the configuration
+nano ~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf
 ```
 
-**Note:** The build script automatically configures the server to listen on port **8080**, allowing you to start it immediately without manual configuration changes.
+**Note:** The build script automatically configures the server to listen on port **8080**, so you can start it immediately without manual configuration changes.
 
 ## Usage
 
-The script creates wrapper binaries in `~/bin/`. Ensure this directory is in your `PATH`:
+The script creates wrapper binaries in `~/bin/`. To use them, ensure this directory is in your `PATH`:
 
 ```bash
 export PATH="$HOME/bin:$PATH"
@@ -58,18 +60,15 @@ openresty
 ```
 
 ### 2. Verify it's Running
-You can verify the installation by checking the processes and testing the response:
+Verify that the processes are active in the background:
 
 ```bash
-# Check if processes are active
+# Check active processes
 ps aux | grep openresty
-
-# Test the local response
-curl -I localhost:8080
 ```
 
 ### 3. Common Management Commands
-The wrapper supports standard Nginx signals:
+The wrapper supports standard signals for easy management:
 
 ```bash
 # Test the configuration file
@@ -81,6 +80,7 @@ openresty -s reload
 # Stop the service
 openresty -s stop
 ```
+
 
 **Note:** All native files are located within your `$HOME` directory (`~/openresty/`), completely independent of the standard Termux prefix or any PRoot environment.
 
