@@ -27,23 +27,22 @@ chmod +x build-openresty-termux.sh
 ```
 ## Configuration
 
-By default, the script installs OpenResty into a custom directory in your home folder. Because paths can vary depending on your specific environment, the most reliable way to find your configuration file is to check the `openresty` wrapper script itself:
+By default, the script installs OpenResty into a custom directory in your home folder. Since the installation path is determined by the script's prefix, the most reliable way to find your configuration file is to check the `openresty` wrapper script:
 
 ```bash
 # Find the prefix used by the wrapper
 cat $(which openresty) | grep "exec"
 ```
 
-In your current environment, the configuration file is located at:
+Typically, the configuration file is located at:
 `~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf`
 
-To check your configuration file:
+To verify the file's location:
 ```bash
-# Replace with the path found above if different
 ls -F ~/openresty-install/usr/local/openresty/nginx/conf/nginx.conf
 ```
 
-**Note:** The build script automatically configures the server to listen on port **8080**, so you can start it immediately without manual configuration changes.
+**Note:** The build script automatically configures the server to listen on port **8080**, allowing you to start it immediately without manual configuration changes.
 
 ## Usage
 
