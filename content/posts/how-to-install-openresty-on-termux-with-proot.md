@@ -51,11 +51,11 @@ apt-get update
 apt-get -y install openresty
 ```
 
-## Phase 4: Configure for Non-Root Environment
+## Phase 4: Configure for Non-Root Environment (Inside Ubuntu)
 
 In Termux/PRoot, you cannot bind to privileged ports below 1024 (like the default port 80). You must change the listening port to a higher value, such as **8080**.
 
-Use `sed` to update the configuration file instantly:
+**Important:** Ensure you are still logged into Ubuntu (`proot-distro login ubuntu`) before running this command:
 
 ```bash
 # Change default port 80 to 8080
