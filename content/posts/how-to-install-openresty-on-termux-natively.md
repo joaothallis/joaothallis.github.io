@@ -49,9 +49,9 @@ openresty
 ```
 
 ### Verify it's Running
-Check the version using the binary in your path:
+Verify that the processes are active in the background:
 ```bash
-openresty -v
+ps aux | grep openresty
 ```
 
 **Note:** Unlike the PRoot method, do not use `/usr/local/` paths. All native files are located within your `$HOME` directory.

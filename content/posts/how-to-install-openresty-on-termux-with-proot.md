@@ -72,12 +72,7 @@ You can now start OpenResty using its absolute binary path. Note that `systemctl
 ```
 
 ### Verify it's Running
-First, check the version to ensure the binary is accessible:
-```bash
-/usr/local/openresty/bin/openresty -v
-```
-
-Then, verify the process is actually running in the background:
+Verify that the OpenResty processes are active in the background:
 ```bash
 ps aux | grep openresty
 ```
