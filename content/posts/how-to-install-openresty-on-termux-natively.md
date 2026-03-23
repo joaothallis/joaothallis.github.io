@@ -32,11 +32,16 @@ chmod +x build-openresty-termux.sh
 
 Just like the PRoot version, native OpenResty cannot bind to port 80 without root. The installer defaults to a safe port, but you can always verify or change it in your `nginx.conf`.
 
-The native installation typically resides in your home directory (`~/openresty/`). You can use `sed` to update the configuration file instantly:
+The native installation typically resides in your home directory (`~/openresty/`). You can use `sed` to update the configuration file:
 
 ```bash
 # Change default port 80 to 8080
-sed -i 's/listen[[:space:]]\+80;/listen 8080;/g' ~/openresty/nginx/conf/nginx.conf
+sed -i 's/listen[[:space:]]\+80;/listen 8080;/g' ~/openresty/conf/nginx.conf
+```
+
+**Note:** If the command above fails with a "No such file or directory" error, verify your exact configuration path by running:
+```bash
+openresty -V 2>&1 | grep -oP "(?<=--conf-path=)[^ ]+"
 ```
 
 ## Usage
