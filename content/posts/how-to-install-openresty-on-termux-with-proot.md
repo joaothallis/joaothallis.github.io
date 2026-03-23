@@ -62,9 +62,9 @@ In Termux/PRoot, you cannot bind to privileged ports below 1024 (like the defaul
 sed -i 's/listen[[:space:]]\+80;/listen 8080;/g' /usr/local/openresty/nginx/conf/nginx.conf
 ```
 
-## Phase 5: Start and Verify
+## Phase 5: Start and Verify (Inside Ubuntu)
 
-You can now start OpenResty using its absolute binary path. Note that `systemctl` is not available in PRoot environments.
+You can now start OpenResty using its absolute binary path. Note that `systemctl` is not available in PRoot environments, and **these commands must be run while logged into Ubuntu**.
 
 ### Start the Service
 ```bash
