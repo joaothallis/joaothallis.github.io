@@ -31,7 +31,13 @@ This replays each commit and amends it with the `-S` flag, which adds your GPG s
 If some commits are already signed and you only want to sign the missing ones:
 
 ```bash
-git rebase --exec 'if [ "$(git log -1 --format=%G? HEAD)" = "N" ]; then git commit --amend --no-edit -S; fi' $(git merge-base main HEAD)
+FILTER_BRANCH_SQUELCH_WARNING=1 git filter-branch --force --commit-filter '
+  status="$(git log -1 --format=%G? "$GIT_COMMIT")"
+  if [ "$status" = "N" ]; then
+    git commit-tree -S "$@"
+  else
+    git commit-tree "$@"
+  fi' $(git merge-base main HEAD)..HEAD
 ```
 
 The `if` condition checks whether each commit has no signature (`N`). Only unsigned commits get amended with a GPG signature. Already-signed commits are left untouched.
