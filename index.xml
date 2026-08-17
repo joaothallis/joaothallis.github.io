@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>João Thallis</title><link>https://joaothallis.com/</link><description>Recent content on João Thallis</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 11 Apr 2026 10:00:00 -0300</lastBuildDate><atom:link href="https://joaothallis.com/index.xml" rel="self" type="application/rss+xml"/><item><title>How to Set Claude Code Effort Level to Max</title><link>https://joaothallis.com/posts/how-to-set-claude-code-effort-level-to-max/</link><pubDate>Sat, 11 Apr 2026 10:00:00 -0300</pubDate><guid>https://joaothallis.com/posts/how-to-set-claude-code-effort-level-to-max/</guid><description>&lt;p&gt;By default, Claude Code starts with medium reasoning effort. You can bump it up to max for deeper, more thorough responses.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>João Thallis</title><link>https://joaothallis.com/</link><description>Recent content on João Thallis</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 17 Aug 2026 12:25:31 -0300</lastBuildDate><atom:link href="https://joaothallis.com/index.xml" rel="self" type="application/rss+xml"/><item><title>Reviewing Code Locally</title><link>https://joaothallis.com/posts/reviewing-code-locally/</link><pubDate>Mon, 17 Aug 2026 12:25:31 -0300</pubDate><guid>https://joaothallis.com/posts/reviewing-code-locally/</guid><description>&lt;p&gt;So GitHub is having another incident (&lt;a href="https://www.githubstatus.com/%29" target="_blank" rel="noreferrer"&gt;https://www.githubstatus.com/)&lt;/a&gt;, affecting the UI and GitHub Actions:&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+&lt;figure&gt;
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;picture
+ class="mx-auto my-0 rounded-md"
+ 
+ &gt;
+ 
+ 
+ 
+ 
+ &lt;source
+ 
+ srcset="https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_63fac3638c871684.webp 330w,https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_1b64f9c58de75d29.webp 660w
+ 
+ ,https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_8108aed24aea00e2.webp 1024w
+ 
+ 
+ ,https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_a44f2a66b7ac9969.webp 1320w
+ "
+ 
+ sizes="100vw"
+ type="image/webp"
+ /&gt;
+ 
+ &lt;img
+ width="2032"
+ height="1768"
+ class="mx-auto my-0 rounded-md"
+ alt="GitHub status page listing incident updates: Actions, Pull Requests, Issues and API Requests experiencing degraded availability"
+ loading="lazy" decoding="async"
+ 
+ src="https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_fc605732a915310c.png" srcset="https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_2aa09425e3f74c22.png 330w,https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_fc605732a915310c.png 660w
+ 
+ ,https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_233efc297dcd1bf4.png 1024w
+ 
+ 
+ ,https://joaothallis.com/posts/reviewing-code-locally/github-incident-status-page_hu_513cb02468364e14.png 1320w
+ "
+ sizes="100vw"
+ 
+ /&gt;
+ &lt;/picture&gt;
+ 
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;I usually use GitHub (&lt;code&gt;https://github.com/&amp;lt;org&amp;gt;/&amp;lt;project&amp;gt;/pull/&amp;lt;pr&amp;gt;/changes&lt;/code&gt;) to review changes, together with checking out the branch to look at details in my code editor, but this time it was not possible to review using the GitHub UI due to the incident:&lt;/p&gt;</description></item><item><title>How to Set Claude Code Effort Level to Max</title><link>https://joaothallis.com/posts/how-to-set-claude-code-effort-level-to-max/</link><pubDate>Sat, 11 Apr 2026 10:00:00 -0300</pubDate><guid>https://joaothallis.com/posts/how-to-set-claude-code-effort-level-to-max/</guid><description>&lt;p&gt;By default, Claude Code starts with medium reasoning effort. You can bump it up to max for deeper, more thorough responses.&lt;/p&gt;
 &lt;p&gt;You might try setting &lt;code&gt;effortLevel&lt;/code&gt; in &lt;code&gt;~/.claude/settings.json&lt;/code&gt;:&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-json" data-lang="json"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;{&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="nt"&gt;&amp;#34;effortLevel&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;max&amp;#34;&lt;/span&gt;
