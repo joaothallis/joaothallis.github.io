@@ -1,4 +1,70 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sonic-Pi on João Thallis</title><link>https://joaothallis.com/tags/sonic-pi/</link><description>Recent content in Sonic-Pi on João Thallis</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joaothallis.com/tags/sonic-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating Music with Programming</title><link>https://joaothallis.com/posts/creating-music-with-programming/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/creating-music-with-programming/</guid><description>&lt;p&gt;&lt;strong&gt;DevFest Sul 2022&lt;/strong&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Sonic-Pi on João Thallis</title><link>https://joaothallis.com/tags/sonic-pi/</link><description>Recent content in Sonic-Pi on João Thallis</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 10 Dec 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://joaothallis.com/tags/sonic-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>Creating Music with Programming</title><link>https://joaothallis.com/posts/creating-music-with-programming/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/creating-music-with-programming/</guid><description>&lt;p&gt;
+
+
+
+
+
+&lt;figure&gt;
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;picture
+ class="mx-auto my-0 rounded-md"
+ 
+ &gt;
+ 
+ 
+ 
+ 
+ &lt;source
+ 
+ srcset="https://joaothallis.com/posts/creating-music-with-programming/poster_hu_8d2d110b7605ff02.webp 330w,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_6a67c5dc48e70243.webp 660w
+ 
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_a5b12d2648b86a67.webp 800w
+ 
+ 
+ 
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_a5b12d2648b86a67.webp 800w
+ 
+ "
+ 
+ sizes="100vw"
+ type="image/webp"
+ /&gt;
+ 
+ &lt;img
+ width="800"
+ height="800"
+ class="mx-auto my-0 rounded-md"
+ alt="DevFest Sul 2022 poster for &amp;ldquo;Creating Music with Programming&amp;rdquo; (Criando música com programação), featuring João Thallis"
+ loading="lazy" decoding="async"
+ 
+ src="https://joaothallis.com/posts/creating-music-with-programming/poster_hu_e45deef2bbaf53ed.jpg" srcset="https://joaothallis.com/posts/creating-music-with-programming/poster_hu_edc407a939f064fd.jpg 330w,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_e45deef2bbaf53ed.jpg 660w
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster.jpg 800w
+ 
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster.jpg 800w
+ "
+ sizes="100vw"
+ 
+ /&gt;
+ &lt;/picture&gt;
+ 
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DevFest Sul 2022&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;December 10, 2022 — Florianópolis, Brazil&lt;/p&gt;
-&lt;h2 id="about-the-workshop" class="relative group"&gt;About the workshop &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-workshop" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;In this workshop, participants learned the basics of Sonic Pi, a tool for creating music and live performance with code. By the end, they could create their own piece of music.&lt;/p&gt;
-&lt;h2 id="about-the-speaker" class="relative group"&gt;About the speaker &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-speaker" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;João Thallis is a back-end software developer working with Python and Elixir. He has experience building resilient, distributed systems and using tools such as PostgreSQL, Docker, and Kubernetes. He is also interested in DevOps and automation.&lt;/p&gt;</description></item></channel></rss>
+&lt;h2 id="about-the-workshop" class="relative group"&gt;About the workshop &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-workshop" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;In this workshop, participants learned the basics of Sonic Pi, a tool for creating music and live performance with code. By the end, they could create their own piece of music.&lt;/p&gt;</description></item></channel></rss>

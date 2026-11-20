@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nix-Bitcoin on João Thallis</title><link>https://joaothallis.com/tags/nix-bitcoin/</link><description>Recent content in Nix-Bitcoin on João Thallis</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 27 Jul 2024 00:00:00 +0000</lastBuildDate><atom:link href="https://joaothallis.com/tags/nix-bitcoin/index.xml" rel="self" type="application/rss+xml"/><item><title>Introduction to nix-bitcoin</title><link>https://joaothallis.com/posts/introduction-to-nix-bitcoin/</link><pubDate>Sat, 27 Jul 2024 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/introduction-to-nix-bitcoin/</guid><description>&lt;p&gt;
+
+
+
+
+
+&lt;figure&gt;
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;picture
+ class="mx-auto my-0 rounded-md"
+ 
+ &gt;
+ 
+ 
+ 
+ 
+ &lt;source
+ 
+ srcset="https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_9447d9564fc6d876.webp 330w,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_ee135e7a13d079b3.webp 660w
+ 
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_ffccbd10ba65fe0e.webp 800w
+ 
+ 
+ 
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_ffccbd10ba65fe0e.webp 800w
+ 
+ "
+ 
+ sizes="100vw"
+ type="image/webp"
+ /&gt;
+ 
+ &lt;img
+ width="800"
+ height="450"
+ class="mx-auto my-0 rounded-md"
+ alt="Casa21 Workshops poster for Introduction to nix-bitcoin with João Thallis, July 27, 2024 at 10:00 in São Paulo"
+ loading="lazy" decoding="async"
+ 
+ src="https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_943146462ec29a95.jpg" srcset="https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_b90ab5e2422a2f55.jpg 330w,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_943146462ec29a95.jpg 660w
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster.jpg 800w
+ 
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster.jpg 800w
+ "
+ sizes="100vw"
+ 
+ /&gt;
+ &lt;/picture&gt;
+ 
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Casa21 Workshops — Vinteum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;July 27, 2024, at 10:00&lt;/p&gt;
+&lt;p&gt;Casa21, São Paulo, Brazil&lt;/p&gt;
+&lt;h2 id="about-the-workshop" class="relative group"&gt;About the workshop &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-workshop" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;nix-bitcoin is a collection of Nix packages and NixOS modules for installing full-featured Bitcoin nodes, with an emphasis on security. The workshop introduces Nix, the package manager and functional programming language, and NixOS, then covers using nix-bitcoin on a local machine, in virtual machines, and in the cloud. I also demonstrated installing NixOS on DigitalOcean using &lt;a href="https://github.com/elitak/nixos-infect" target="_blank" rel="noreferrer"&gt;nixos-infect&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

@@ -239,7 +239,77 @@ virtual machine or a dedicated machine (locally or using a cloud provider).&lt;/
 &lt;h2 id="step-1-create-ssh-keys" class="relative group"&gt;Step 1: Create SSH Keys &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#step-1-create-ssh-keys" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;First, you need to create SSH keys to access your server. To infect your machine
 you need to have root access using SSH Keys, it&amp;rsquo;s not possible to infect a
 machine without SSH access because &lt;a href="https://github.com/elitak/nixos-infect/" target="_blank" rel="noreferrer"&gt;nixos-infect&lt;/a&gt; is not able to get your current
-password and set on the new operating system (NixOS).&lt;/p&gt;</description></item><item><title>Refactoring Using Neovim</title><link>https://joaothallis.com/posts/refactoring-using-neovim/</link><pubDate>Thu, 25 Apr 2024 23:30:26 -0300</pubDate><guid>https://joaothallis.com/posts/refactoring-using-neovim/</guid><description>&lt;p&gt;This post is about how you can use Neovim to have refactoring tooling inspired in &lt;a href="https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/install-go#refactoring-and-your-tooling" target="_blank" rel="noreferrer"&gt;Refactoring and your tooling&lt;/a&gt; from &lt;a href="https://quii.gitbook.io/learn-go-with-tests" target="_blank" rel="noreferrer"&gt;Learn Go with tests&lt;/a&gt;.&lt;/p&gt;
+password and set on the new operating system (NixOS).&lt;/p&gt;</description></item><item><title>Introduction to nix-bitcoin</title><link>https://joaothallis.com/posts/introduction-to-nix-bitcoin/</link><pubDate>Sat, 27 Jul 2024 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/introduction-to-nix-bitcoin/</guid><description>&lt;p&gt;
+
+
+
+
+
+&lt;figure&gt;
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;picture
+ class="mx-auto my-0 rounded-md"
+ 
+ &gt;
+ 
+ 
+ 
+ 
+ &lt;source
+ 
+ srcset="https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_9447d9564fc6d876.webp 330w,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_ee135e7a13d079b3.webp 660w
+ 
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_ffccbd10ba65fe0e.webp 800w
+ 
+ 
+ 
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_ffccbd10ba65fe0e.webp 800w
+ 
+ "
+ 
+ sizes="100vw"
+ type="image/webp"
+ /&gt;
+ 
+ &lt;img
+ width="800"
+ height="450"
+ class="mx-auto my-0 rounded-md"
+ alt="Casa21 Workshops poster for Introduction to nix-bitcoin with João Thallis, July 27, 2024 at 10:00 in São Paulo"
+ loading="lazy" decoding="async"
+ 
+ src="https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_943146462ec29a95.jpg" srcset="https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_b90ab5e2422a2f55.jpg 330w,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster_hu_943146462ec29a95.jpg 660w
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster.jpg 800w
+ 
+ 
+ ,https://joaothallis.com/posts/introduction-to-nix-bitcoin/poster.jpg 800w
+ "
+ sizes="100vw"
+ 
+ /&gt;
+ &lt;/picture&gt;
+ 
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Casa21 Workshops — Vinteum&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;July 27, 2024, at 10:00&lt;/p&gt;
+&lt;p&gt;Casa21, São Paulo, Brazil&lt;/p&gt;
+&lt;h2 id="about-the-workshop" class="relative group"&gt;About the workshop &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-workshop" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;nix-bitcoin is a collection of Nix packages and NixOS modules for installing full-featured Bitcoin nodes, with an emphasis on security. The workshop introduces Nix, the package manager and functional programming language, and NixOS, then covers using nix-bitcoin on a local machine, in virtual machines, and in the cloud. I also demonstrated installing NixOS on DigitalOcean using &lt;a href="https://github.com/elitak/nixos-infect" target="_blank" rel="noreferrer"&gt;nixos-infect&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Refactoring Using Neovim</title><link>https://joaothallis.com/posts/refactoring-using-neovim/</link><pubDate>Thu, 25 Apr 2024 23:30:26 -0300</pubDate><guid>https://joaothallis.com/posts/refactoring-using-neovim/</guid><description>&lt;p&gt;This post is about how you can use Neovim to have refactoring tooling inspired in &lt;a href="https://quii.gitbook.io/learn-go-with-tests/go-fundamentals/install-go#refactoring-and-your-tooling" target="_blank" rel="noreferrer"&gt;Refactoring and your tooling&lt;/a&gt; from &lt;a href="https://quii.gitbook.io/learn-go-with-tests" target="_blank" rel="noreferrer"&gt;Learn Go with tests&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id="extractinline" class="relative group"&gt;Extract/Inline &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#extractinline" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;I am using &lt;a href="https://github.com/ThePrimeagen/refactoring.nvim" target="_blank" rel="noreferrer"&gt;refactoring.nvim&lt;/a&gt; plugin.&lt;/p&gt;
 &lt;h3 id="extract-variable" class="relative group"&gt;Extract Variable &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#extract-variable" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h3&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-lua" data-lang="lua"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;vim.keymap&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;set&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;#34;x&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;#34;&amp;lt;leader&amp;gt;rv&amp;#34;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kr"&gt;function&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;refactoring&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="n"&gt;refactor&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Extract Variable&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="kr"&gt;end&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You need to select the part of your code that you want to extract to a variable and then press &lt;code&gt;&amp;lt;leader&amp;gt;rv&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>How to Run mssql Docker Image on Apple Silicon</title><link>https://joaothallis.com/posts/how-to-run-mssql-docker-image-on-apple-silicon/</link><pubDate>Fri, 14 Jul 2023 00:05:08 -0300</pubDate><guid>https://joaothallis.com/posts/how-to-run-mssql-docker-image-on-apple-silicon/</guid><description>&lt;p&gt;I was having this &lt;a href="https://github.com/microsoft/mssql-docker/issues/668" target="_blank" rel="noreferrer"&gt;issue&lt;/a&gt; when I was running the container.&lt;/p&gt;
@@ -307,10 +377,76 @@ password and set on the new operating system (NixOS).&lt;/p&gt;</description></i
 &lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;DISPLAY&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;:0
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="nb"&gt;export&lt;/span&gt; &lt;span class="nv"&gt;BROWSER&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;/usr/bin/wslview
 &lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;open localhost:9100/metrics
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Creating Music with Programming</title><link>https://joaothallis.com/posts/creating-music-with-programming/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/creating-music-with-programming/</guid><description>&lt;p&gt;&lt;strong&gt;DevFest Sul 2022&lt;/strong&gt;&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item><item><title>Creating Music with Programming</title><link>https://joaothallis.com/posts/creating-music-with-programming/</link><pubDate>Sat, 10 Dec 2022 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/creating-music-with-programming/</guid><description>&lt;p&gt;
+
+
+
+
+
+&lt;figure&gt;
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;picture
+ class="mx-auto my-0 rounded-md"
+ 
+ &gt;
+ 
+ 
+ 
+ 
+ &lt;source
+ 
+ srcset="https://joaothallis.com/posts/creating-music-with-programming/poster_hu_8d2d110b7605ff02.webp 330w,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_6a67c5dc48e70243.webp 660w
+ 
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_a5b12d2648b86a67.webp 800w
+ 
+ 
+ 
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_a5b12d2648b86a67.webp 800w
+ 
+ "
+ 
+ sizes="100vw"
+ type="image/webp"
+ /&gt;
+ 
+ &lt;img
+ width="800"
+ height="800"
+ class="mx-auto my-0 rounded-md"
+ alt="DevFest Sul 2022 poster for &amp;ldquo;Creating Music with Programming&amp;rdquo; (Criando música com programação), featuring João Thallis"
+ loading="lazy" decoding="async"
+ 
+ src="https://joaothallis.com/posts/creating-music-with-programming/poster_hu_e45deef2bbaf53ed.jpg" srcset="https://joaothallis.com/posts/creating-music-with-programming/poster_hu_edc407a939f064fd.jpg 330w,https://joaothallis.com/posts/creating-music-with-programming/poster_hu_e45deef2bbaf53ed.jpg 660w
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster.jpg 800w
+ 
+ 
+ ,https://joaothallis.com/posts/creating-music-with-programming/poster.jpg 800w
+ "
+ sizes="100vw"
+ 
+ /&gt;
+ &lt;/picture&gt;
+ 
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DevFest Sul 2022&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;December 10, 2022 — Florianópolis, Brazil&lt;/p&gt;
-&lt;h2 id="about-the-workshop" class="relative group"&gt;About the workshop &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-workshop" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;In this workshop, participants learned the basics of Sonic Pi, a tool for creating music and live performance with code. By the end, they could create their own piece of music.&lt;/p&gt;
-&lt;h2 id="about-the-speaker" class="relative group"&gt;About the speaker &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-speaker" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;João Thallis is a back-end software developer working with Python and Elixir. He has experience building resilient, distributed systems and using tools such as PostgreSQL, Docker, and Kubernetes. He is also interested in DevOps and automation.&lt;/p&gt;</description></item><item><title>From Zero to Deploying an Elixir Application</title><link>https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/</link><pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/</guid><description>&lt;p&gt;
+&lt;h2 id="about-the-workshop" class="relative group"&gt;About the workshop &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-workshop" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;In this workshop, participants learned the basics of Sonic Pi, a tool for creating music and live performance with code. By the end, they could create their own piece of music.&lt;/p&gt;</description></item><item><title>From Zero to Deploying an Elixir Application</title><link>https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/</link><pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/</guid><description>&lt;p&gt;
 
 
 
