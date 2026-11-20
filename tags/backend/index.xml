@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Backend on João Thallis</title><link>https://joaothallis.com/tags/backend/</link><description>Recent content in Backend on João Thallis</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 22 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://joaothallis.com/tags/backend/index.xml" rel="self" type="application/rss+xml"/><item><title>From Zero to Deploying an Elixir Application</title><link>https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/</link><pubDate>Wed, 22 Jul 2020 00:00:00 +0000</pubDate><guid>https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/</guid><description>&lt;p&gt;
+
+
+
+
+
+&lt;figure&gt;
+ 
+ 
+
+
+
+
+
+
+
+
+ 
+ &lt;picture
+ class="mx-auto my-0 rounded-md"
+ 
+ &gt;
+ 
+ 
+ 
+ 
+ &lt;source
+ 
+ srcset="https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_175660172f56f55c.webp 330w,https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_6c59a5e176d50934.webp 660w
+ 
+ 
+ ,https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_33b5945099d03555.webp 768w
+ 
+ 
+ 
+ 
+ ,https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_33b5945099d03555.webp 768w
+ 
+ "
+ 
+ sizes="100vw"
+ type="image/webp"
+ /&gt;
+ 
+ &lt;img
+ width="768"
+ height="768"
+ class="mx-auto my-0 rounded-md"
+ alt="SC Talks Online poster for Do Zero ao Deploy de uma Aplicação Elixir, featuring João Thallis on July 22 at 14:30"
+ loading="lazy" decoding="async"
+ 
+ src="https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_fe58ef19911aac00.png" srcset="https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_3e465e6231640526.png 330w,https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster_hu_fe58ef19911aac00.png 660w
+ 
+ ,https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster.png 768w
+ 
+ 
+ ,https://joaothallis.com/posts/from-zero-to-deploying-an-elixir-application/poster.png 768w
+ "
+ sizes="100vw"
+ 
+ /&gt;
+ &lt;/picture&gt;
+ 
+
+
+&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UFRJ Computer Science Week — SC Talks Online&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;July 22, 2020, at 14:30&lt;/p&gt;
+&lt;h2 id="about-the-speaker" class="relative group"&gt;About the speaker &lt;span class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100"&gt;&lt;a class="group-hover:text-primary-300 dark:group-hover:text-neutral-700" style="text-decoration-line: none !important;" href="#about-the-speaker" aria-label="Anchor"&gt;#&lt;/a&gt;&lt;/span&gt;&lt;/h2&gt;&lt;p&gt;João Thallis is self-taught. He decided to learn programming as a teenager to create games, and learned Elixir to complete a technical challenge for a position at Stone Pagamentos, then the country&amp;rsquo;s fifth-largest acquiring company. After a two-year internship at Stone, he was a software developer at Conta Stone, a digital payments account built with Elixir, his favorite programming language.&lt;/p&gt;</description></item></channel></rss>
