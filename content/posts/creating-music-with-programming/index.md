@@ -5,6 +5,8 @@ draft: false
 tags: ["event", "devfest", "music", "sonic-pi", "workshop"]
 ---
 
+![DevFest Sul 2022 poster for "Creating Music with Programming" (Criando música com programação), featuring João Thallis](poster.jpg)
+
 **DevFest Sul 2022**
 
 December 10, 2022 — Florianópolis, Brazil
